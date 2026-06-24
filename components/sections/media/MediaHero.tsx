@@ -23,7 +23,26 @@ export default function MediaHero() {
 
           {/* Headline */}
           <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-charcoal tracking-tight leading-[1.15] max-w-3xl">
-            Our Story, in Pictures and Words
+            Our Story, in Pictures and{" "}
+            <span className="relative inline-block whitespace-nowrap">
+              <span className="relative z-10">Words</span>
+              <motion.svg
+                className="absolute left-0 -bottom-1 w-full h-[12px] -z-0"
+                viewBox="0 0 100 10"
+                preserveAspectRatio="none"
+              >
+                <motion.path
+                  d="M0,5 Q50,1 100,5"
+                  fill="none"
+                  stroke="var(--accent)"
+                  strokeWidth="6"
+                  strokeLinecap="round"
+                  initial={{ pathLength: 0 }}
+                  animate={{ pathLength: 1 }}
+                  transition={{ duration: 0.8, ease: "easeOut" as const, delay: 0.5 }}
+                />
+              </motion.svg>
+            </span>
           </h1>
         </motion.div>
       </div>
