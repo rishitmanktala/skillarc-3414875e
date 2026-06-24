@@ -1,0 +1,91 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { Quote } from "lucide-react";
+
+export default function FounderNote() {
+  const containerVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" as const },
+    },
+  };
+
+  return (
+    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto w-full">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={containerVariants}
+          className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center"
+        >
+          
+          {/* Left Column: Founder Profile Card */}
+          <div className="lg:col-span-4 flex flex-col items-center text-center">
+            {/* Avatar Circle Placeholder with custom gradient */}
+            <motion.div
+              whileHover={{ rotate: 8, scale: 1.03 }}
+              transition={{ type: "spring", stiffness: 300, damping: 15 }}
+              className="relative w-48 h-48 md:w-56 md:h-56 rounded-full p-2 bg-gradient-to-tr from-primary via-accent to-highlight shadow-md mb-6 cursor-pointer"
+            >
+              <div className="w-full h-full rounded-full bg-white flex items-center justify-center text-charcoal/30 font-display text-lg font-bold select-none">
+                SG
+              </div>
+            </motion.div>
+            
+            <h3 className="font-display font-bold text-xl md:text-2xl text-charcoal">
+              Shreya Gupta
+            </h3>
+            
+            <p className="font-body text-xs font-bold text-accent uppercase tracking-widest mt-1">
+              Founder
+            </p>
+          </div>
+
+          {/* Right Column: Handwritten Letter Card */}
+          <div className="lg:col-span-8">
+            <div className="bg-[#FCFAF7] border border-[#2D2D2D]/5 rounded-2xl p-6 md:p-8 shadow-[0_4px_20px_-4px_rgba(45,45,45,0.03)] relative overflow-hidden">
+              {/* Top Accent Blob */}
+              <div className="absolute top-0 right-0 w-24 h-24 rounded-bl-full bg-primary/20 -z-0" />
+              
+              {/* Quote Pull-out (Pink) */}
+              <div className="relative z-10 p-5 mb-8 bg-accent/15 border-l-4 border-accent rounded-r-2xl flex gap-4 items-start">
+                <Quote className="w-5 h-5 text-accent shrink-0 mt-1" />
+                <p className="font-display italic text-lg text-charcoal font-semibold leading-relaxed">
+                  At SkillARC, we believe that every underprivileged individual has the potential to create a better future when given the right guidance, skills, and opportunities.
+                </p>
+              </div>
+
+              {/* Letter Body */}
+              <div className="relative z-10 font-body text-sm md:text-base text-charcoal/90 space-y-5 leading-relaxed">
+                <p className="font-semibold text-lg font-display">Dear Friends,</p>
+                <p>
+                  Our mission is to bridge the gap between potential and possibility by empowering underprivileged students with essential life skills, confidence, leadership abilities, and the mindset needed to navigate real-world challenges.
+                </p>
+                <p>
+                  SkillARC is not just about learning — it is about building individuals who are confident, capable, and ready to make an impact.
+                </p>
+              </div>
+
+              {/* Signature Line */}
+              <div className="relative z-10 border-t border-charcoal/10 mt-8 pt-6 flex flex-col items-start">
+                <p className="font-display italic text-2xl text-charcoal/80 mb-2 select-none">
+                  Shreya Gupta
+                </p>
+                <p className="font-body text-xs font-bold text-muted-grey uppercase tracking-wider">
+                  Founder, SkillARC Foundation
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+        </motion.div>
+      </div>
+    </section>
+  );
+}

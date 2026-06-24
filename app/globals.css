@@ -1,26 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #A8D5E2;
+  --color-accent: #F2B5C4;
+  --color-background-custom: #FDF6F0;
+  --color-card-custom: #FFFFFF;
+  --color-highlight: #E8C97A;
+  --color-charcoal: #2D2D2D;
+  --color-muted-grey: #7A7A7A;
+
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'DM Sans', sans-serif;
+
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 22px;
+  --text-2xl: 28px;
+  --text-3xl: 36px;
+  --text-4xl: 48px;
+  --text-5xl: 64px;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #A8D5E2;
+  --accent: #F2B5C4;
+  --background: #FDF6F0;
+  --card: #FFFFFF;
+  --highlight: #E8C97A;
+  --charcoal: #2D2D2D;
+  --muted-grey: #7A7A7A;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  color: var(--charcoal);
+  font-family: var(--font-body), 'DM Sans', sans-serif;
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Subtle noise texture overlay on the background using CSS */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.02;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* ═══════════════════════════════════════════════════
+   DESIGN TOKEN UTILITIES
+   Shared visual primitives for structural consistency
+   ═══════════════════════════════════════════════════ */
+
+/* ── Section Layout Skeleton ── */
+.section-padding {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 640px) {
+  .section-padding {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.section-container {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* ── Eyebrow Pill Label ── */
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-body), 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #F2B5C4;
+  background-color: rgba(242, 181, 196, 0.1);
+  padding: 0.375rem 0.875rem;
+  border-radius: 9999px;
+  margin-bottom: 0.75rem;
+}
+@media (min-width: 768px) {
+  .eyebrow {
+    font-size: 0.875rem;
+  }
+}
+
+/* ── Card Token A: Standard UI Surface ── */
+.card-surface {
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  border: 1px solid rgba(45, 45, 45, 0.05);
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px -4px rgba(45, 45, 45, 0.03);
+  transition: all 300ms ease;
+}
+@media (min-width: 768px) {
+  .card-surface {
+    padding: 2rem;
+  }
+}
+.card-surface:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px -6px rgba(45, 45, 45, 0.08);
+}
+
+/* ── Card Token B: Glassmorphic Surface ── */
+.card-glass {
+  background-color: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  color: #FFFFFF;
+  transition: all 300ms ease;
+}
+@media (min-width: 768px) {
+  .card-glass {
+    padding: 2rem;
+  }
+}
+.card-glass:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Card Token C: Interactive Tile ── */
+.card-tile {
+  background-color: #FFFBF8;
+  border-radius: 0.75rem;
+  border: 1px dashed rgba(45, 45, 45, 0.1);
+  padding: 1rem;
+  transition: all 200ms ease;
+}
+.card-tile:hover {
+  border-color: #A8D5E2;
+  background-color: #FFFFFF;
+}
+
+/* ── Button Tokens ── */
+.btn-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-body), 'DM Sans', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  transition: all 200ms ease;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+.btn-base:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background-color: #A8D5E2;
+  color: #2D2D2D;
+  box-shadow: 0 1px 3px rgba(45, 45, 45, 0.06);
+}
+.btn-primary:hover {
+  background-color: rgba(168, 213, 226, 0.8);
+}
+
+.btn-accent {
+  background-color: #F2B5C4;
+  color: #2D2D2D;
+  box-shadow: 0 1px 3px rgba(45, 45, 45, 0.06);
+}
+.btn-accent:hover {
+  background-color: rgba(242, 181, 196, 0.8);
+}
+
+.btn-outlined {
+  background-color: transparent;
+  color: #2D2D2D;
+  border: 2px solid #2D2D2D;
+}
+.btn-outlined:hover {
+  background-color: #2D2D2D;
+  color: #FDF6F0;
+}
+
+/* ── Icon Box Wrapper ── */
+.icon-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  background-color: rgba(168, 213, 226, 0.1);
+  color: #A8D5E2;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+.icon-box--accent {
+  background-color: rgba(242, 181, 196, 0.1);
+  color: #F2B5C4;
+}
+.icon-box--highlight {
+  background-color: rgba(232, 201, 122, 0.1);
+  color: #E8C97A;
 }

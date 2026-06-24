@@ -1,65 +1,79 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Heart } from "lucide-react";
+import HeroSection from "@/components/sections/HeroSection";
+import ImpactSection from "@/components/sections/ImpactSection";
+import AboutPreviewSection from "@/components/sections/AboutPreviewSection";
+import ProgramsSection from "@/components/sections/ProgramsSection";
+import StoriesSection from "@/components/sections/StoriesSection";
+import AnimatedSection from "@/components/ui/AnimatedSection";
+
+export const metadata: Metadata = {
+  title: "SkillARC | Achieving Real Change | Youth Foundation India",
+  description: "SkillARC is a youth-led Youth Foundation empowering adolescents and youth across India through critical life skills, digital literacy, and leadership training programs.",
+  keywords: ["Youth Foundation", "SkillARC", "Youth Empowerment", "Life Skills", "India", "Leadership Training", "Digital Literacy", "Aspirations"],
+  openGraph: {
+    title: "SkillARC | Achieving Real Change | Youth Foundation India",
+    description: "SkillARC is a youth-led Youth Foundation empowering adolescents and youth across India through critical life skills, digital literacy, and leadership training programs.",
+    url: "https://skillarc.org",
+    siteName: "SkillARC",
+    images: [
+      {
+        url: "https://skillarc.org/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "SkillARC — Achieving Real Change",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+};
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      {/* 1. Hero Section */}
+      <HeroSection />
+
+      {/* 2. Impact Stats Section */}
+      <ImpactSection />
+
+      {/* 3. About Preview Section */}
+      <AboutPreviewSection />
+
+      {/* 4. Core Programs Grid Section */}
+      <ProgramsSection />
+
+      {/* 5. Youth Stories Testimony Section */}
+      <StoriesSection />
+
+      {/* 6. Support & Donation CTA Section */}
+      <AnimatedSection
+        variant="fade-up"
+        className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-accent/15 via-white to-primary/15 border-t border-b border-primary/5 text-center"
+      >
+        <div className="max-w-3xl mx-auto">
+          <span className="inline-flex items-center font-body text-xs md:text-sm font-semibold tracking-wider uppercase text-accent bg-accent/10 px-3.5 py-1.5 rounded-full mb-3 select-none">
+            Support The Cause
+          </span>
+          <h2 className="font-display font-bold text-3xl sm:text-4xl text-charcoal tracking-tight leading-tight mb-4">
+            Be the Reason Someone Finds Their Potential
+          </h2>
+          <p className="font-body text-sm md:text-base text-muted-grey mb-8 max-w-xl mx-auto">
+            Your contribution directly funds curriculum design, learning toolkits, mental health workshops, and active mentorship programs for adolescents who need them most.
           </p>
+          <div className="flex justify-center">
+            <Link
+              href="/get-involved#donate"
+              className="inline-flex items-center gap-2 font-body font-semibold text-sm bg-charcoal hover:bg-charcoal/90 text-white px-6 py-3 rounded-xl shadow-md transition-all duration-200 hover:scale-[1.02] active:scale-95 cursor-pointer"
+            >
+              <Heart className="w-4 h-4 text-accent fill-accent animate-pulse" />
+              Support & Donate
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </AnimatedSection>
+    </>
   );
 }
