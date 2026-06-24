@@ -1,6 +1,5 @@
 import AboutHero from "@/components/sections/about/AboutHero";
 import FounderNote from "@/components/sections/about/FounderNote";
-import TeamGrid from "@/components/sections/TeamGrid";
 import MilestoneTimeline from "@/components/sections/about/MilestoneTimeline";
 import CollaborationsSection from "@/components/sections/about/CollaborationsSection";
 import VolunteersSection from "@/components/sections/about/VolunteersSection";
@@ -38,9 +37,6 @@ export default function AboutPage() {
 
       {/* 2. Message from the Founder */}
       <FounderNote />
-
-      {/* 3. Core Team Grid Section */}
-      <TeamGrid />
 
       {/* 4. Milestones Timeline */}
       <MilestoneTimeline />
