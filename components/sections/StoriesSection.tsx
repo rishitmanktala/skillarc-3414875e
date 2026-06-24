@@ -18,6 +18,12 @@ const STORIES = [
     role: "Suncity School, Sector-37D, Gurugram",
     initials: "RS",
   },
+  {
+    quote: "SkillArc gave me the practical communication skills I need for the real world. I learned how to present myself confidently, express my thoughts, and step into leadership roles. It also helped me step out of my comfort zone and gave me a new experience.",
+    author: "Twisha Sharma",
+    role: "Suncity School, Sector-37D, Gurugram",
+    initials: "TS",
+  },
 ];
 
 export default function StoriesSection() {
@@ -61,7 +67,7 @@ export default function StoriesSection() {
         {/* Desktop Grid Layout (lg screen and above) - stagger container */}
         <AnimatedSection
           variant="stagger-container"
-          className="hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto"
+          className="hidden lg:grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto"
         >
           {STORIES.map((story) => (
             <AnimatedSection
