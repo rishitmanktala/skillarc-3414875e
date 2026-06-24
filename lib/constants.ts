@@ -13,7 +13,7 @@ export const IMPACT_STATS = [
   { label: "Volunteers Engaged", value: "35+" },
   { label: "Workshops Conducted", value: "15+" },
   { label: "Youth Foundations Collaborated", value: "7+" },
-  { label: "Communities Reached", value: "Ongoing" },
+  { label: "Communities Reached", value: "10+" },
 ] as const;
 
 // core programmatic offerings of SkillArc
