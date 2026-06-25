@@ -9,7 +9,7 @@ const MotionLink = motion.create(Link);
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[calc(100vh-70px)] py-16 md:py-24 px-4 sm:px-6 lg:px-8 flex items-center overflow-hidden bg-background-custom">
+    <section className="relative min-h-[calc(100vh-70px)] py-16 md:py-24 px-4 sm:px-6 lg:px-8 flex items-center overflow-hidden bg-pastel-blue/20">
       {/* Background blur blobs with gentle float animations */}
       <motion.div
         animate={{
@@ -139,7 +139,7 @@ export default function HeroSection() {
           delay={0.25}
           className="lg:col-span-5 w-full flex items-center justify-center relative min-h-[300px] lg:min-h-[500px] mt-8 lg:mt-0"
         >
-          <div className="relative w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[480px] aspect-square rounded-3xl overflow-hidden shadow-xl border border-primary/20 bg-background-custom flex items-center justify-center p-6 sm:p-8">
+          <div className="relative w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[480px] aspect-square rounded-3xl overflow-hidden shadow-xl border border-primary/20 bg-pastel-blue/20 flex items-center justify-center p-6 sm:p-8">
             {/* Ambient pulsing background glow */}
             <motion.div 
               className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-accent/20 -z-10"

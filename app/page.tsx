@@ -51,7 +51,7 @@ export default function Home() {
       {/* 6. Support & Donation CTA Section */}
       <AnimatedSection
         variant="fade-up"
-        className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-accent/15 via-white to-primary/15 border-t border-b border-primary/5 text-center"
+        className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-pastel-peach/30 border-t border-b border-primary/5 text-center"
       >
         <div className="max-w-3xl mx-auto">
           <span className="inline-flex items-center font-body text-xs md:text-sm font-semibold tracking-wider uppercase text-accent bg-accent/10 px-3.5 py-1.5 rounded-full mb-3 select-none">

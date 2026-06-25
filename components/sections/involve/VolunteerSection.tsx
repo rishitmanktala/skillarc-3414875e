@@ -60,7 +60,7 @@ export default function VolunteerSection() {
   };
 
   return (
-    <section id="volunteer" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden scroll-mt-20">
+    <section id="volunteer" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-pastel-purple/20 overflow-hidden scroll-mt-20">
       <div className="max-w-7xl mx-auto w-full">
         
         {/* Section Heading */}
@@ -90,7 +90,7 @@ export default function VolunteerSection() {
                   className={`cursor-pointer border rounded-2xl p-6 transition-all duration-300 ${
                     isSelected
                       ? "border-primary bg-primary/5 shadow-sm"
-                      : "border-charcoal/5 bg-background-custom hover:border-primary/40 hover:bg-white"
+                      : "border-charcoal/5 bg-white/50 hover:border-primary/40 hover:bg-white"
                   }`}
                 >
                   <div className="flex items-center justify-between">

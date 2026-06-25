@@ -72,7 +72,7 @@ export default function InternshipSection() {
   };
 
   return (
-    <section id="intern" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-background-custom overflow-hidden scroll-mt-20">
+    <section id="intern" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-pastel-blue/20 overflow-hidden scroll-mt-20">
       <div className="max-w-7xl mx-auto w-full">
         
         {/* Section Heading */}

@@ -33,7 +33,7 @@ export default function PartnerSection() {
   };
 
   return (
-    <section id="partner" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden scroll-mt-20">
+    <section id="partner" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-pastel-yellow/30 overflow-hidden scroll-mt-20">
       <div className="max-w-7xl mx-auto w-full">
         
         {/* Main Grid Layout */}

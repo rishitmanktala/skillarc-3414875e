@@ -12,6 +12,12 @@
   --color-highlight-dark: #9B7524;
   --color-charcoal: #2D2D2D;
   --color-muted-grey: #5A5A5A;
+  --color-pastel-blue: #A8D5E2;
+  --color-pastel-pink: #F2B5C4;
+  --color-pastel-yellow: #FDF1D6;
+  --color-pastel-green: #D4E6B5;
+  --color-pastel-purple: #E2D4E6;
+  --color-pastel-peach: #FFDAB9;
 
   --font-display: 'Playfair Display', serif;
   --font-body: 'DM Sans', sans-serif;
@@ -38,6 +44,12 @@
   --highlight-dark: #9B7524;
   --charcoal: #2D2D2D;
   --muted-grey: #5A5A5A;
+  --pastel-blue: #A8D5E2;
+  --pastel-pink: #F2B5C4;
+  --pastel-yellow: #FDF1D6;
+  --pastel-green: #D4E6B5;
+  --pastel-purple: #E2D4E6;
+  --pastel-peach: #FFDAB9;
 }
 
 html {

@@ -34,7 +34,7 @@ export default function DonateSection() {
   };
 
   return (
-    <section id="donate" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-accent/15 overflow-hidden scroll-mt-20">
+    <section id="donate" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-pastel-green/30 overflow-hidden scroll-mt-20">
       <div className="max-w-5xl mx-auto w-full">
         
         {/* Section Heading */}
@@ -110,7 +110,7 @@ export default function DonateSection() {
             </div>
             
             <div className="flex items-center gap-2 w-full">
-              <div className="bg-background-custom border border-charcoal/5 rounded-xl px-4 py-2.5 font-mono text-sm text-charcoal flex-grow select-all">
+              <div className="bg-white border border-charcoal/5 rounded-xl px-4 py-2.5 font-mono text-sm text-charcoal flex-grow select-all">
                 SkillARC@upi
               </div>
               <motion.button

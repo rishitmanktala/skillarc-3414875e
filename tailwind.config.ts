@@ -16,6 +16,14 @@ const config: Config = {
         highlight: "#E8C97A",   // Gold Accent
         charcoal: "#2D2D2D",    // Deep Charcoal
         mutedGrey: "#7A7A7A",   // Muted Grey
+        pastel: {
+          blue: "#A8D5E2",      // Primary
+          pink: "#F2B5C4",      // Accent
+          yellow: "#FDF1D6",    // Soft Pastel Yellow
+          green: "#D4E6B5",     // Soft Pastel Green
+          purple: "#E2D4E6",    // Soft Pastel Purple
+          peach: "#FFDAB9",     // Peach Puff
+        }
       },
       fontFamily: {
         display: ["Playfair Display", "serif"],

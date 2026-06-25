@@ -46,7 +46,7 @@ export default function ContactMain() {
   };
 
   return (
-    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
+    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-pastel-pink/20 overflow-hidden">
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
         
         {/* LEFT COLUMN — Contact Information */}

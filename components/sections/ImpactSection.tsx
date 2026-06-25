@@ -38,7 +38,7 @@ function Counter({ value }: { value: string }) {
 
 export default function ImpactSection() {
   return (
-    <section className="relative py-16 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white border-b border-primary/5">
+    <section className="relative py-16 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-pastel-yellow/30 border-b border-primary/5">
       {/* Background blobs for design depth */}
       <div className="absolute top-10 right-10 w-72 h-72 rounded-full bg-primary/10 blur-3xl -z-10 pointer-events-none" />
       <div className="absolute bottom-10 left-10 w-72 h-72 rounded-full bg-accent/10 blur-3xl -z-10 pointer-events-none" />

@@ -18,7 +18,7 @@ export default function InvolveHero() {
   };
 
   return (
-    <section className="relative w-full py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-primary/30 via-primary/10 to-background-custom overflow-hidden">
+    <section className="relative w-full py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-pastel-peach/30 overflow-hidden">
       {/* Background blobs */}
       <div className="absolute top-10 right-10 w-72 h-72 rounded-full bg-accent/10 blur-3xl -z-10" />
       <div className="absolute bottom-10 left-10 w-96 h-96 rounded-full bg-primary/10 blur-3xl -z-10" />

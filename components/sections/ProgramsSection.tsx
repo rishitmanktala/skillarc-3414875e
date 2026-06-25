@@ -24,7 +24,7 @@ const getProgramIcon = (index: number) => {
 
 export default function ProgramsSection() {
   return (
-    <section className="relative py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
+    <section className="relative py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-pastel-pink/20 overflow-hidden">
       {/* Decorative Blur Blob */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-primary/5 blur-3xl -z-10" />
 
